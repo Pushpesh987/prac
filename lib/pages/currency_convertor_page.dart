@@ -19,6 +19,18 @@ class _CurrencyConvertorMaterialPageState
   double result = 0;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  // for disposing everything so that we can avoid memory leaks
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
@@ -35,7 +47,7 @@ class _CurrencyConvertorMaterialPageState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '₹ ${result!=0 ? result.toStringAsFixed(2) : 0}',
+              '₹ ${result != 0 ? result.toStringAsFixed(2) : 0}',
               style: const TextStyle(
                   fontSize: 44,
                   fontWeight: FontWeight.bold,
