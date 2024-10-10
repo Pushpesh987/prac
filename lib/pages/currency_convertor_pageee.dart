@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
 
-class CurrencyConvertorMaterialPage extends StatefulWidget {
-  const CurrencyConvertorMaterialPage({super.key});
+class CurrencyConvertorMaterialPageee extends StatelessWidget {
+  CurrencyConvertorMaterialPageee({super.key});
 
-  @override
-  State<CurrencyConvertorMaterialPage> createState() =>
-      _CurrencyConvertorMaterialPageState();
-}
-
-class _CurrencyConvertorMaterialPageState
-    extends State<CurrencyConvertorMaterialPage> {
   final border = OutlineInputBorder(
     borderSide: const BorderSide(width: 2.0, style: BorderStyle.solid),
     borderRadius: BorderRadius.circular(5),
   );
 
-  final TextEditingController textEditingController = TextEditingController();
-  double result = 0;
-
   @override
   Widget build(BuildContext context) {
+    double result = 0;
+    final TextEditingController textEditingController = TextEditingController();
+
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
@@ -35,7 +28,7 @@ class _CurrencyConvertorMaterialPageState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '₹ $result',
+              result.toString(),
               style: const TextStyle(
                   fontSize: 44,
                   fontWeight: FontWeight.bold,
@@ -65,9 +58,7 @@ class _CurrencyConvertorMaterialPageState
               padding: const EdgeInsets.all(10.0),
               child: TextButton(
                 onPressed: () {
-                  setState(() {
-                    result = double.parse(textEditingController.text) * 81;
-                  });
+                  result = double.parse(textEditingController.text) * 81;
                 },
                 style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.black),
