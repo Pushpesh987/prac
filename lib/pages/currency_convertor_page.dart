@@ -35,7 +35,7 @@ class _CurrencyConvertorMaterialPageState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '₹ $result',
+              '₹ ${result!=0 ? result.toStringAsFixed(2) : 0}',
               style: const TextStyle(
                   fontSize: 44,
                   fontWeight: FontWeight.bold,
