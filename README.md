@@ -1,16 +1,28 @@
-# prac
+```
+TextField(
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+```
 
-A new Flutter project.
+![1728477270357](image/README/1728477270357.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+For showing the label is showing we are using the `label` property
 
-A few resources to get you started if this is your first Flutter project:
+```
+decoration: InputDecoration(
+                label: Text(
+                  "Please enter the amount in the USD",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![1728477749911](image/README/1728477749911.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+if label has to not to shown while typing then we can use the `hintText`
